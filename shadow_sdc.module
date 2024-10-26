@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * SDCでShadow DOMを利用します。.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function shadow_sdc_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name == 'help.page.shadow_sdc') {
+    $path = __DIR__ . '/README.txt';
+
+    if (file_exists($path)) {
+      return '<pre>' . file_get_contents($path) . '</pre>';
+    }
+  }
+}

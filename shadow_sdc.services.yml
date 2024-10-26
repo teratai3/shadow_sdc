@@ -1,0 +1,7 @@
+services: 
+  # twig.loader.custom:
+  twig.loader.filesystem:
+    class: 'Drupal\shadow_sdc\Twig\CustomLoader'
+    arguments: ['.', '@module_handler', '@theme_handler','@theme.manager','@file_url_generator' ,'%twig.config%']
+    tags:
+      - { name: twig.loader, priority: 100 }

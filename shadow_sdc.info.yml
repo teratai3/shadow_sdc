@@ -1,0 +1,7 @@
+name: "shadow_sdc"
+type: module
+description: "SDCでShadow DOMを利用します。"
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:sdc
